@@ -6,6 +6,8 @@ the source code of Hierarchy Decomposition and Construction on Hypergraphs
 
 We preprocess all datasets so that the vertices of each hyperedge in the hypergraph are different from each other, and each hyperedge contains at least two vertices
 
+NFI: This is a processed dataset for our experiments with 446 vertices and 3651 hyperedges.
+
 ## About how to use
 
 ```bash
