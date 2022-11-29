@@ -18,7 +18,7 @@ using namespace std;
 
 struct myCmp
 {
-    bool operator()(const pair<int, int> &a, const pair<int, int> &b)
+    const bool operator()(const pair<int, int> &a, const pair<int, int> &b) const
     {
         if (a.first == b.first)
             return false;
