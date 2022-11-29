@@ -33,7 +33,7 @@ There is a data set NFI, we need to compute MinKSCore.
 
 Our operations are all implemented on MinKSCore.
 
-1. We need to enter the path of the file at line 290 and the name of the file NFI at line 364.
+1. We need to input the path of the file at line 290 and the name of the file NFI at line 364.
 
 2. `g++ MinKSCore.cpp -pthread -std=c++11 -o MinKSCore`
 
