@@ -32,13 +32,6 @@ struct myCmp
     }
 };
 
-/**
- * @brief Get the Graph object 读取一个超图的超边集和超点集
- *
- * @param filename 读取图的文件
- * @param hyperEdge 超边集，存储每一条边对应的点
- * @param hyperNode 超点集，存储每一个点对应的边
- */
 void getGraph(const string &filename, vector<vector<int>> &hyperEdge, unordered_map<int, vector<int>> &hyperNode)
 {
     ifstream fin(filename, ios::in);
@@ -155,6 +148,6 @@ int main()
     {
         it.join();
     }
-    cout << "全部完成" << endl;
+    cout << "all finish!" << endl;
 }
 // -pthread -std=c++11
