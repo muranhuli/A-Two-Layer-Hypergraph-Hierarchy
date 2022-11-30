@@ -49,13 +49,6 @@ struct myCmp
     }
 };
 
-/**
- * @brief Get the Graph object 读取一个超图的超边集和超点集
- *
- * @param filename 读取图的文件
- * @param hyperEdge 超边集，存储每一条边对应的点
- * @param hyperNode 超点集，存储每一个点对应的边
- */
 void getGraph(const string &filename, vector<vector<int>> &hyperEdge, unordered_map<int, vector<int>> &hyperNode)
 {
     ifstream fin(filename, ios::in);
@@ -203,7 +196,6 @@ void kcCoreDecomp(const vector<vector<int>> &hyperEdge, const unordered_map<int,
         {
             int v = q.front();
             q.pop();
-            //判断点是否满足kcore的定义
             int count = 0;
             for (auto edge : hyperNode.at(v))
             {
@@ -298,7 +290,7 @@ void solve(const string &str)
     ostringstream ss;
     ss << str << "  kcore finished!" << endl;
     cout << ss.str();
-    //求出边的core值
+    //compute the core number of hyperedge.
     vector<int> coreE(int(hyperEdge.size()), 0);
     unordered_set<int> s;
     for (auto i = 0; i < int(hyperEdge.size()); i++)
@@ -316,7 +308,7 @@ void solve(const string &str)
         t.insert(k);
     string filepath1 = "./result/statistic1/" + str + "-statistic";
     ofstream fout(filepath1);
-    fout << "k值 时间 k-core子图个数 (k,s)种类 边数 点数" << endl;
+    fout << "the_value_of_k time the_number_of_connected_k-core_subgraphs  the_number_of_(k,s)-core the_number_of_hyperedge the_number_of_vertices" << endl;
     for (auto k : t)
     {
         auto t1 = std::chrono::steady_clock::now();
@@ -374,6 +366,6 @@ int main()
     {
         it.join();
     }
-    cout << "全部完成" << endl;
+    cout << "all finish!" << endl;
     return 0;
 }
