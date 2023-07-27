@@ -1,6 +1,6 @@
-# Hierarchy-Decomposition-and-Construction-on-Hypergraphs
+# A Two-Layer Hierarchy for Investigating Hypergraphs Hierarchies
 
-the source code of Hierarchy Decomposition and Construction on Hypergraphs
+the source code of A Two-Layer Hierarchy for Investigating Hypergraphs Hierarchies.
 
 ## About the dataset
 
